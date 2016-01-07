@@ -128,7 +128,7 @@ sub getAlertStatus {
       return 2;
     }
     if($esvalue <= $warning){
-      return 3;
+      return 1;
     }
   }
   else {
@@ -136,9 +136,11 @@ sub getAlertStatus {
       return 2;
     }
     if($esvalue >= $warning){
-      return 3;
+      return 1;
     }
   }
+
+  return 0;
 }
 
 sub help {
